@@ -1,0 +1,35 @@
+PROCEDURE swap(VAR tab ARRAY_OF,VAR tab ARRAY_OF) : INTEGER
+VAR
+   tmp : INTEGER;
+BEGIN
+  tmp := tab[i];
+  tab[i] := tab[i-1];
+  tab[i-1] := tmp;
+END
+
+PROCEDURE table()
+VAR
+    j :INTEGER := 0
+    n : INTEGER
+    tab : ARRAY_OF
+BEGIN
+    Write("dim de table")
+
+    FOR j FROM 0 TO n STEP 1  DO
+        Read(tab[j])
+    END_FOR
+END
+
+ALGORITHM sort_sorting
+VAR
+    i : INTEGER := 1
+    tab : ARRAY_OF
+BEGIN
+    //this is declareted table
+    table();
+    //this is sort sorting
+    WHILE (tab[i] < tab[i-1] ) DO
+        swap(tab[i],tab[i-1])
+        i := i + 1
+    END_WHILE
+END
